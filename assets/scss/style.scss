@@ -46,6 +46,8 @@ header{
             li{
                 a{
                    color: #d0cbff !important;
+                   position: relative;
+                   transition: linear 0.3s;
                    button{
                         background-color: #5C4FF3;
                    }
@@ -54,8 +56,42 @@ header{
                         border: 1px solid #5C4FF3 !important;
                    }
                 }
+                a.active{
+                    color: #fff !important;
+                    margin-left: 10px !important;
+                    margin-right: 5px !important;
+                }
+                a.active::after{
+                    content: '\f101';
+                    position: absolute;
+                    font: var(--fa-font-solid);
+                    font-size: 15px;
+                    left: -8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #d0cbff !important;
+                }
                 a:hover{
                     color: #fff !important;
+                    margin-left: 10px !important;
+                    margin-right: 5px !important;
+                }
+                a:hover::after{
+                    content: '\f101';
+                    position: absolute;
+                    font: var(--fa-font-solid);
+                    font-size: 15px;
+                    left: -8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #d0cbff !important;
+                }
+                a.button:hover{
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                }
+                a.button::after{
+                    content: '';
                 }
             }
         }
@@ -66,7 +102,6 @@ header{
 // banner section start 
 .banner{
     padding: 90px 0px;
-    overflow-y: visible;
     .banner-texts{
         padding: 100px 0px;
         position: relative;
@@ -139,6 +174,161 @@ header{
     }
 }
 // banner end 
+
+// banner-2 start
+.banner-2{
+    padding: 180px 0px 60px;
+    .banner-2-texts{
+        position: relative;
+        h1{
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 120px;
+        }
+    }
+    .banner-2-texts::before{
+        content: '';
+        position: absolute;
+        background-image: url('../images/shadow_purple.png');
+        background-size: cover;
+        height: 600px;
+        width: 600px;
+        background-repeat: no-repeat;
+        opacity: 0.3;
+        left: 50px;
+        bottom: -200px;
+    }
+    .banner-2-texts::after{
+        content: '';
+        position: absolute;
+        background-image: url('../images/dot-shape.png');
+        height: 200px;
+        width: 100px;
+        background-repeat: no-repeat;
+        opacity: 1;
+        right: 0px;
+        bottom: -200px;
+    }
+    .row{
+        padding-bottom: 60px;
+        position: relative;
+    }
+    h2{
+        font-size: 60px;
+        font-weight: 700;
+        padding: 30px 0px 60px;
+        position: relative;
+    }
+    h2::after{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 100px;
+        background-image: url('../images/dot-shape.png');
+        right: -60px;
+        bottom: -100px;
+        z-index: -1;
+    }
+    .img-pop{
+        img{
+            border: 1px solid #5C4FF3;
+            box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            -webkit-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            -moz-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            transition: linear 0.3s;
+        }
+        
+        a{
+            position: relative;
+            transition: linear 0.3s;
+            display: block;
+        }
+        a:hover{
+            img{
+                box-shadow: -10px -10px 25px -9px #190e3f;
+                -webkit-box-shadow: -10px -10px 25px -9px #190e3f;
+                -moz-box-shadow: -10px -10px 25px -9px #190e3f;
+            }
+        }
+        a:hover::after{
+            margin: 10px 10px;
+            content: '';
+            font: var(--fa-font-solid);
+            color: #fff;
+            position: absolute;
+            background-color: #5d4ff3be;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 3;
+            transition: linear 0.3s;
+            
+        }
+        a:hover::before{
+            content: '\f06e';
+            font: var(--fa-font-solid);
+            color: #fff;
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 4;
+            transform: translate(-50%, -50%);
+            transition: linear 0.3s;
+            box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+            -webkit-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+            -moz-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0)
+            
+        }
+    }
+    button{
+        background-color: #5C4FF3;
+        transition: linear 0.3s !important;
+    }
+    button:hover{
+        background-color: transparent;
+        border: 1px solid #5C4FF3 !important;
+    }
+   .text-shadow-img-left::before{
+        content: '';
+        position: absolute;
+        background-image: url('../images/shadow2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+        height: 700px;
+        width: 700px;
+        bottom: -250px;
+        left: -300px;
+        z-index: -1;
+   }
+   .text-shadow-img-right::before{
+        content: '';
+        position: absolute;
+        background-image: url('../images/shadow2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+        height: 700px;
+        width: 700px;
+        bottom: -250px;
+        right: -300px;
+        z-index: -1;
+   }
+   .text-shadow-dot-right::before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-image: url('../images/dot-shape.png');
+    left: -60px;
+    bottom: -100px;
+    z-index: -1;
+   }
+} 
+// banner-2 end
+
 
 // quality start 
 .quality{

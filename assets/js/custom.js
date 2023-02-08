@@ -12,11 +12,9 @@ $(document).ready(function() {
             duration: 200, // duration of the effect, in milliseconds
             // CSS transition easing function
             opener: function(openerElement) {
-            return openerElement.is('img') ? openerElement : openerElement.find('img');
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
             }
-        },
-        
-    }
-
+        }
     );
-  });
+});
