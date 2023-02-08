@@ -234,17 +234,51 @@ header nav.navbar ul li a:hover {
   bottom: -100px;
   z-index: -1;
 }
-.recent-projects img {
+.recent-projects .img-pop img {
   border: 1px solid #5C4FF3;
   box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
   -webkit-box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
   -moz-box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
   transition: linear 0.3s;
 }
-.recent-projects img:hover {
-  box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
-  -webkit-box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
-  -moz-box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
+.recent-projects .img-pop a {
+  position: relative;
+  transition: linear 0.3s;
+  display: block;
+}
+.recent-projects .img-pop a:hover img {
+  box-shadow: -10px -10px 25px -9px #190e3f;
+  -webkit-box-shadow: -10px -10px 25px -9px #190e3f;
+  -moz-box-shadow: -10px -10px 25px -9px #190e3f;
+}
+.recent-projects .img-pop a:hover::after {
+  margin: 10px 10px;
+  content: "";
+  font: var(--fa-font-solid);
+  color: #fff;
+  position: absolute;
+  background-color: rgba(93, 79, 243, 0.7450980392);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: linear 0.3s;
+}
+.recent-projects .img-pop a:hover::before {
+  content: "\f06e";
+  font: var(--fa-font-solid);
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  transition: linear 0.3s;
+  box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+  -webkit-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+  -moz-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
 }
 .recent-projects button {
   background-color: #5C4FF3;
@@ -306,9 +340,6 @@ header nav.navbar ul li a:hover {
   color: #fff;
 }
 .contact .contact-form .form-group textarea::-moz-placeholder, .contact .contact-form .form-group input::-moz-placeholder {
-  color: #fff;
-}
-.contact .contact-form .form-group textarea:-ms-input-placeholder, .contact .contact-form .form-group input:-ms-input-placeholder {
   color: #fff;
 }
 .contact .contact-form .form-group textarea::placeholder, .contact .contact-form .form-group input::placeholder {

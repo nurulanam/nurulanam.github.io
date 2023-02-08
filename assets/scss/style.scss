@@ -251,17 +251,58 @@ header{
         bottom: -100px;
         z-index: -1;
     }
-    img{
-        border: 1px solid #5C4FF3;
-        box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
-        -webkit-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
-        -moz-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
-        transition: linear 0.3s;
-    }
-    img:hover{
-        box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
-        -webkit-box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
-        -moz-box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
+    .img-pop{
+        img{
+            border: 1px solid #5C4FF3;
+            box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            -webkit-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            -moz-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+            transition: linear 0.3s;
+        }
+        
+        a{
+            position: relative;
+            transition: linear 0.3s;
+            display: block;
+        }
+        a:hover{
+            img{
+                box-shadow: -10px -10px 25px -9px #190e3f;
+                -webkit-box-shadow: -10px -10px 25px -9px #190e3f;
+                -moz-box-shadow: -10px -10px 25px -9px #190e3f;
+            }
+        }
+        a:hover::after{
+            margin: 10px 10px;
+            content: '';
+            font: var(--fa-font-solid);
+            color: #fff;
+            position: absolute;
+            background-color: #5d4ff3be;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 3;
+            transition: linear 0.3s;
+            
+        }
+        a:hover::before{
+            content: '\f06e';
+            font: var(--fa-font-solid);
+            color: #fff;
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 4;
+            transform: translate(-50%, -50%);
+            transition: linear 0.3s;
+            box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+            -webkit-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0);
+            -moz-box-shadow: -10px -10px 25px -9px rgb(0, 0, 0)
+            
+        }
     }
     button{
         background-color: #5C4FF3;
