@@ -236,9 +236,15 @@ header nav.navbar ul li a:hover {
 }
 .recent-projects img {
   border: 1px solid #5C4FF3;
-  box-shadow: 10px 10px 25px -6px rgb(92, 79, 243);
-  -webkit-box-shadow: 10px 10px 25px -6px rgb(92, 79, 243);
-  -moz-box-shadow: 10px 10px 25px -6px rgb(92, 79, 243);
+  box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
+  -webkit-box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
+  -moz-box-shadow: 10px 10px 25px -9px rgb(92, 79, 243);
+  transition: linear 0.3s;
+}
+.recent-projects img:hover {
+  box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
+  -webkit-box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
+  -moz-box-shadow: -10px -10px 25px -9px rgb(92, 79, 243);
 }
 .recent-projects button {
   background-color: #5C4FF3;

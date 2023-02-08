@@ -253,9 +253,15 @@ header{
     }
     img{
         border: 1px solid #5C4FF3;
-        box-shadow: 10px 10px 25px -6px rgba(92,79,243,1);
-        -webkit-box-shadow: 10px 10px 25px -6px rgba(92,79,243,1);
-        -moz-box-shadow: 10px 10px 25px -6px rgba(92,79,243,1);
+        box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+        -webkit-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+        -moz-box-shadow: 10px 10px 25px -9px rgba(92,79,243,1);
+        transition: linear 0.3s;
+    }
+    img:hover{
+        box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
+        -webkit-box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
+        -moz-box-shadow: -10px -10px 25px -9px rgba(92,79,243,1);
     }
     button{
         background-color: #5C4FF3;
