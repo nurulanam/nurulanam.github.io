@@ -231,7 +231,10 @@ header{
 // recent-projects start 
 .recent-projects{
     padding: 30px 0px;
-    // overflow-x: hidden !important;
+    .row{
+        padding-bottom: 60px;
+        position: relative;
+    }
     h2{
         font-size: 60px;
         font-weight: 700;
@@ -262,9 +265,6 @@ header{
         background-color: transparent;
         border: 1px solid #5C4FF3 !important;
     }
-   .row{
-    position: relative;
-   }
    .text-shadow-img-left::before{
         content: '';
         position: absolute;
