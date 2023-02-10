@@ -396,7 +396,6 @@ header nav.navbar ul li a.button::after {
 }
 .recent-projects .row {
   padding-bottom: 0px;
-  position: relative;
 }
 .recent-projects h2 {
   font-size: 60px;
@@ -636,6 +635,12 @@ footer p {
   }
 }
 @media (max-width: 767px) {
+  header nav.navbar ul li a.active::after {
+    left: -20px;
+  }
+  header nav.navbar ul li a:hover::after {
+    left: -20px;
+  }
   .quality .quality-box .col-md-3:first-child, .quality .quality-box .col-md-3:nth-child(2) {
     border-bottom: 1px solid rgba(15, 8, 38, 0.4431372549) !important;
   }

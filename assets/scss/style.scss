@@ -423,7 +423,6 @@ header{
     padding: 30px 0px;
     .row{
         padding-bottom: 0px;
-        position: relative;
     }
     h2{
         font-size: 60px;
@@ -691,6 +690,20 @@ footer{
     }
 }
 @media (max-width: 767px) {
+    header{
+        nav.navbar{
+            ul{
+                li{
+                    a.active::after{
+                        left: -20px;
+                    }
+                    a:hover::after{
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
     .quality{
         .quality-box{
             .col-md-3:first-child, .col-md-3:nth-child(2){
