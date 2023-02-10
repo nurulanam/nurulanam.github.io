@@ -422,7 +422,7 @@ header{
 .recent-projects{
     padding: 30px 0px;
     .row{
-        padding-bottom: 60px;
+        padding-bottom: 0px;
         position: relative;
     }
     h2{
@@ -680,8 +680,15 @@ footer{
 
 
 // Media Quries
-@media (max-width: 991px) { 
-
+@media (max-width: 991px) {
+    .svg{
+        display: none;
+    }
+    .recent-projects{
+        .row{
+            padding: 15px 0px;
+        }
+    }
 }
 @media (max-width: 767px) {
     .quality{
