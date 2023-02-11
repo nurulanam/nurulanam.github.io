@@ -109,6 +109,9 @@ header nav.navbar ul li a.button::after {
   font-size: 60px;
   font-weight: 700;
 }
+.banner .banner-texts h2 {
+  font-size: 18px;
+}
 .banner .banner-texts a.btn {
   background-color: #5C4FF3;
 }
@@ -445,7 +448,7 @@ header nav.navbar ul li a.button::after {
   transition: linear 0.3s;
 }
 .recent-projects .img-pop a:hover::before {
-  content: "\f06e";
+  content: "\f00e";
   font: var(--fa-font-solid);
   color: #fff;
   font-size: 30px;
@@ -627,6 +630,12 @@ footer p {
 }
 
 @media (max-width: 991px) {
+  header nav.navbar ul li a.active::after {
+    left: -20px;
+  }
+  header nav.navbar ul li a:hover::after {
+    left: -20px;
+  }
   .svg {
     display: none;
   }
@@ -635,12 +644,6 @@ footer p {
   }
 }
 @media (max-width: 767px) {
-  header nav.navbar ul li a.active::after {
-    left: -20px;
-  }
-  header nav.navbar ul li a:hover::after {
-    left: -20px;
-  }
   .quality .quality-box .col-md-3:first-child, .quality .quality-box .col-md-3:nth-child(2) {
     border-bottom: 1px solid rgba(15, 8, 38, 0.4431372549) !important;
   }
